@@ -177,11 +177,13 @@ namespace Markdig.Renderers
         {
             while (true)
             {
-                if (inline is Run run)
+                var run = inline as Run;
+                if (run != null)
                 {
                     return run.Text.Length == 0 || run.Text.First().IsWhitespace();
                 }
-                if (inline is Span span)
+                var span = inline as Span;
+                if (span != null)
                 {
                     inline = span.Inlines.FirstInline;
                     continue;
@@ -196,12 +198,13 @@ namespace Markdig.Renderers
             while (true)
             {
                 var inlines = (element as Span)?.Inlines ?? (element as Paragraph)?.Inlines;
-
-                if (inlines?.LastInline is Run run)
+                var run = inlines?.LastInline as Run;
+                if (run != null)
                 {
                     return run.Text.Length == 0 || run.Text.Last().IsWhitespace();
                 }
-                if (inlines?.LastInline is Span span)
+                var span = inlines?.LastInline as Span;
+                if (span != null)
                 {
                     element = span;
                     continue;
