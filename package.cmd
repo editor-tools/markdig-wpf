@@ -1,0 +1,1 @@
+tools\NuGet.exe pack -build -properties Configuration=Release src/Markdig.Wpf/Markdig.Wpf.csproj
