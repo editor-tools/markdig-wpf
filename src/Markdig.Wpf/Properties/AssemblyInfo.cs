@@ -10,13 +10,13 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Markdig.Wpf")]
-[assembly: AssemblyDescription("a WPF port to CommonMark compliant Markdig.")]
+[assembly: AssemblyDescription("Signed build of a WPF port of lunet-io/markdig")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
 #else
 [assembly: AssemblyConfiguration("Release")]
 #endif
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Nicolas Musset")]
 [assembly: AssemblyProduct("Markdig.Wpf")]
 [assembly: AssemblyCopyright("Copyright © Nicolas Musset 2016-2017")]
 [assembly: AssemblyTrademark("")]
@@ -31,6 +31,6 @@ namespace Markdig.Wpf
 {
     public static partial class Markdown
     {
-        public const string Version = "0.2.0";
+        public const string Version = "0.2.1";
     }
 }
